@@ -1,0 +1,43 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  gap: 24px;
+}
+
+label {
+  display: block;
+  text-align: center;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  border-radius: 8px;
+  border: 0;
+}
+
+input:invalid {
+  outline: 3px solid red;
+}
+
+input:valid {
+  outline: 3px solid green;
+}
+
+.errorDisplay {
+  font-size: 2rem;
+  color: white;
+  background-color: green;
+  padding: 12px 20px;
+  opacity: 0;
+
+  transition: 0.25s ease;
+}
+
+.errorDisplay.err {
+  background: red;
+}
